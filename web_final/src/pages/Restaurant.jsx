@@ -5,7 +5,7 @@ import { BiChevronLeftCircle } from "react-icons/bi";
 import OrderCard from "../components/OrderCard";
 
 function Restaurant() {
-  document.title = "Res";
+  document.title = "Restaurant";
   const [rests, setRests] = useState([]);
 
   const fetchData = () => {

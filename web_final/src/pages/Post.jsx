@@ -6,9 +6,11 @@ import Post_card from "../components/Post_card";
 import { BiChevronLeftCircle } from "react-icons/bi";
 
 function Post() {
+  document.title = "My Order";
   const [posts, setpost] = useState([]);
   const [menu, setmenu] = useState([]);
   const fetchData = () => {
+
     axios({
       method: "get",
       url: "http://172.20.10.4:5174/api/MyPost",

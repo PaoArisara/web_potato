@@ -9,7 +9,7 @@ function Order(props) {
   const [m, setM] = useState("");
   const [push, setPush] = useState("");
   const [text, setText] = useState("");
-  document.title = "Order11";
+  document.title = "Menu";
   const params = useParams();
 
   const [menus, setMenu] = useState([]);

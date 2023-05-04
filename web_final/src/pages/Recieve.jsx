@@ -6,6 +6,7 @@ import { FiBell } from "react-icons/fi";
 import { FiDownload } from "react-icons/fi";
 
 function Recieve() {
+  document.title = "Receive";
   const [menu, setmenu] = useState([]);
   const [accept, setaccept] = useState([]);
   const [reload, setreload] = useState(0);

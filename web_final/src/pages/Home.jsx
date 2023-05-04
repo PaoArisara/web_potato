@@ -8,7 +8,7 @@ function Home() {
   return (
     <div>
       {localStorage.getItem("token") ? (
-        <div className=" relative w-screen h-screen overflow-hidden bg-base1 bg-cover  items-center font-prom">
+        <div className="relative w-screen h-screen overflow-hidden bg-base1 bg-cover  items-center font-prom">
           <div className=" grid lg:grid-cols-2 lg:px-40">
 
           <div className="flex flex-col justify-center h-screen">
@@ -22,7 +22,7 @@ function Home() {
                 <div className=" text-4xl sm:text-5xl lg:text-6xl font-bold animate__animated animate__fadeInDown">
                   Potato
                 </div>
-                <div className=" text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-600  mx-4 animate__animated animate__fadeInDown">
+                <div className="z-20 text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-600  mx-4 animate__animated animate__fadeInDown">
                   Delivery
                 </div>
               </div>
@@ -30,7 +30,7 @@ function Home() {
 
             <a href="/restaurant" className=" flex justify-center">
               <button
-                className=" my-10 flex justify-center items-center bg-amber-600 text-white rounded-full text-sm sm:text-lg lg:text-xl font-bold 
+                className="z-20 my-10 flex justify-center items-center bg-amber-600 text-white rounded-full text-sm sm:text-lg lg:text-xl font-bold 
        py-3 px-12 animate__animated animate__zoomIn"
               >
                 ORDER NOW
@@ -89,7 +89,7 @@ function Home() {
             </div>
             <div className=" z-40 my-10 text-sm sm:text-lg lg:text-xl animate__animated animate__fadeInDown">
               If you are looking for a website that offers <br></br>
-              food delivery service,you can choose the <br></br>
+              food delivery service, you can choose the <br></br>
               food you want and place an order for delivery.
             </div>
 

@@ -4,6 +4,7 @@ import { FiBell } from "react-icons/fi";
 import { FiDownload } from "react-icons/fi";
 
 function Select() {
+  document.title = "Post";
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
   return (

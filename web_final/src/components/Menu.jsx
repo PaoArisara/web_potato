@@ -8,6 +8,8 @@ function Menu(props) {
   const [Num, setNum] = useState(0);
   const [Addcardalert, setAddcardalert] = useState(false);
   function AddtoCart() {
+    if(Num==0)
+      return;
     props.setM(props.menu.menuFood);
     props.setText("Add")
     props.setPush(true);

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 function Password({ visible, onClose,displayname,password,userpassword }) {
   const [yourpassword,setyourpassword] = useState("");
   const handleOnClose = (e) => {
@@ -61,7 +62,13 @@ return (
                     }
                     else
                     {
-                      alert("ใส่รหัสผ่านใหถูกเส๊")
+                      Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Try again, Password is incorrect',
+          
+                      })
+                  
                     }
                   }}
                 >

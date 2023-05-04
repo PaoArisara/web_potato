@@ -36,7 +36,7 @@ const Signup = () => {
       Swal.fire({
         icon: "warning",
         title: "Oops...",
-        text: "Try again,Confirm Password is not Match",
+        text: "Try again, Confirm Password is not Match",
       });
       return;
     }
