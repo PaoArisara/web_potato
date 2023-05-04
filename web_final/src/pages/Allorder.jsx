@@ -20,7 +20,7 @@ function Allorder() {
     })
       .then((response) => {
         setpost(response.data);
-        //console.log(response.data);
+
       })
       
 
@@ -35,7 +35,6 @@ function Allorder() {
       .then((response) => {
         setmenu(response.data);
 
-        //console.log(response.data);
       })
       .catch((err) => {
         console.log(err);

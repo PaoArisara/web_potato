@@ -6,9 +6,9 @@ import Order from "./pages/Order";
 import Home from "./pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { useState } from "react";
-import Menu_card from "./components/Menu_card";
+
 import Post from "./pages/Post";
-import Rest_card from "./components/Rest_card";
+
 import Allorder_card from "./components/Allorder_card";
 import Cart from "./pages/Cart";
 import Select from "./pages/Select";
@@ -31,9 +31,7 @@ function App() {
           element={<Order reload={[reload, setReload]} />}
         />
         <Route path="/Post" element={<Post />} />
-
-        <Route path="/Mc" element={<Menu_card />} />
-        <Route path="/Rc" element={<Rest_card />} />
+    
         <Route path="/Ac" element={<Allorder_card />} />
         <Route path="/cart" element={<Cart reload={[reload, setReload]} />} />
         <Route path="/sel" element={<Select />} />

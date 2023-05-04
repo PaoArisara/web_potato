@@ -33,7 +33,7 @@ const Navbar = (props) => {
   window.addEventListener("resize", () => {
     if (window.innerWidth > 769) {
       setOpen(false);
-      setDrop(false)
+      setDrop(false);
     }
   });
 
@@ -48,8 +48,6 @@ const Navbar = (props) => {
     })
       .then((response) => {
         setCart(response.data);
-        //console.log(response.data); 
-        //console.log(response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -65,19 +63,14 @@ const Navbar = (props) => {
     })
       .then((response) => {
         setRes(response.data);
-        //console.log(response.data);
-        //console.log(response.data);
       })
       .catch((err) => {
         console.log(err);
       });
   };
   const Count = () => {
-    //console.log(res)
-    //console.log(cart)
     res.forEach((r) => {
       for (let c = 0; c < cart.length; c++) {
-        //console.log(cart[c])
         if (r.restId == cart[c].menu.restaurants.restId) {
           num++;
           break;
@@ -93,7 +86,6 @@ const Navbar = (props) => {
     getData();
   }, [props.reload[0]]);
   Count();
-  const [aof, setAof] = useState(true);
 
   return (
     <nav

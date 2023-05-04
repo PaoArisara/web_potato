@@ -14,7 +14,6 @@ function remove(id) {
   })
     .then((response) => {
       window.location.reload(false);
-      //console.log(response.data);
     })
     .catch((err) => {
       console.log(err);

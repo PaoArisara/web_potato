@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Menu from "../components/Menu";
 import Alert from "../components/Alert";
-import Swal from "sweetalert2";
 
 function Order(props) {
   const [m, setM] = useState("");
@@ -38,10 +37,15 @@ function Order(props) {
 
   return (
     <div class="w-screen  bg-base min-h-screen bg-repeat-y bg-cover pb-20 font-prom">
-         <div className=" pt-20  flex justify-center text-center font-prom">
-        <div className=" bg-orange-600 text-white text-2xl w-52 p-2 rounded-xl">Menu</div>
+      <div className=" pt-20  flex justify-center text-center font-prom">
+        <div className=" bg-orange-600 text-white text-2xl w-52 p-2 rounded-xl">
+          Menu
+        </div>
       </div>
-        <div className="text-center pb-10 text-lg pt-3"> เลือกเมนูที่ต้องการฝากซื้อ </div>
+      <div className="text-center pb-10 text-lg pt-3">
+        {" "}
+        เลือกเมนูที่ต้องการฝากซื้อ{" "}
+      </div>
       <div className="">
         <div class="grid grid-cols-1 gap-14 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 px-10 lg:px-40">
           {menus.map((menu, index) => (
@@ -57,7 +61,13 @@ function Order(props) {
         </div>
       </div>
       {push ? (
-        <div className={` fixed  bottom-2 right-1 ${push?" animate-bounce transition -translate-y-10 duration-1000":""}`}>
+        <div
+          className={` fixed  bottom-2 right-1 ${
+            push
+              ? " animate-bounce transition -translate-y-10 duration-1000"
+              : ""
+          }`}
+        >
           <div className="">
             <Alert m={m} text={text} />
           </div>

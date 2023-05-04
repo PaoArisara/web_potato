@@ -1,8 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { json } from "react-router-dom";
 import { BiChevronLeftCircle } from "react-icons/bi";
-import Swal from "sweetalert2";
+
 
 function Menu(props) {
   const [Num, setNum] = useState(0);
@@ -13,10 +12,7 @@ function Menu(props) {
     props.setM(props.menu.menuFood);
     props.setText("Add")
     props.setPush(true);
-    // Swal.fire({
-    //   icon: "success",
-    //   title: `Add ${props.menu.menuFood} to Cart`,
-    // })
+
     axios({
       method: "post",
       url: "http://172.20.10.4:5174/api/Cart",

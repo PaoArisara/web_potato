@@ -1,33 +1,30 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { BiChevronLeftCircle } from "react-icons/bi";
-function Receive_card({ menu, accept,setreload }) {
-  let total=0;
+function Receive_card({ menu, accept, setreload }) {
+  let total = 0;
   function Cancel() {
     axios({
       method: "delete",
-      url: "http://172.20.10.4:5174/api/Cancel/"+accept.acceptId,
+      url: "http://172.20.10.4:5174/api/Cancel/" + accept.acceptId,
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
-    })
-      .then(function (response) {
-        setreload((x) => x + 1);
-      })
+    }).then(function (response) {
+      setreload((x) => x + 1);
+    });
   }
   function Complete() {
     axios({
       method: "delete",
-      url: "http://172.20.10.4:5174/api/Complete/"+accept.acceptId,
+      url: "http://172.20.10.4:5174/api/Complete/" + accept.acceptId,
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
-    })
-      .then(function (response) {
-        setreload((x) => x + 1);
-      })
+    }).then(function (response) {
+      setreload((x) => x + 1);
+    });
   }
   return (
     <>
@@ -75,7 +72,7 @@ function Receive_card({ menu, accept,setreload }) {
               <h1 className="text-lg pt-2 pb-">รายการอาหาร</h1>
               <ul className="text-center px-4 py-2">
                 {menu.map((item, inxdex) => {
-                  if (accept.post.postId!=item.post.postId) return;
+                  if (accept.post.postId != item.post.postId) return;
                   total += item.price;
                   return (
                     <li className="flex justify-between items-center gap-x-3">
@@ -93,24 +90,28 @@ function Receive_card({ menu, accept,setreload }) {
                     <div>ราคารวม</div>
                   </div>
                   <div className="text-lg">{total} ฿</div>
-                </li>             
+                </li>
               </ul>
-               {/* accept */}
-               
-               <div className="flex">
+              {/* accept */}
+
+              <div className="flex">
                 <div className="mx-4">
-                  <button onClick={Complete} className="mt-4 rounded-md bg-orange-400 py-1 px-2 text-sm hover:bg-orange-600">
+                  <button
+                    onClick={Complete}
+                    className="mt-4 rounded-md bg-orange-400 py-1 px-2 text-sm hover:bg-orange-600"
+                  >
                     Complete
                   </button>
                 </div>
                 <div className="mx-4">
-
-                  <button onClick={Cancel} className="mt-4 rounded-md bg-orange-400 py-1 px-2 text-sm hover:bg-orange-600">
+                  <button
+                    onClick={Cancel}
+                    className="mt-4 rounded-md bg-orange-400 py-1 px-2 text-sm hover:bg-orange-600"
+                  >
                     Cancel
                   </button>
                 </div>
-              
-               </div>
+              </div>
             </div>
           </div>
         </div>

@@ -5,15 +5,13 @@ import Swal from "sweetalert2";
 
 const User = () => {
   document.title = "Edit Profile";
-  
-  // const pwShow = document,querySelector(".show"),createPW = document,querySelector("#password"),confirmPW = document,querySelector("#confirm-password")
-  // pwShow.addEventListener("click",()=>{})
+
   const [user, setuser] = useState([]);
   const [spaceCheck, setSpacecheck] = useState(false);
-  const [password,setpassword] = useState("");
-  const [confirmpassword,setconfirmpassword] = useState("");
-  const [displayname,setdisplayname] = useState("");
-  const[showConfirm,setShowconfirm]=useState(false);
+  const [password, setpassword] = useState("");
+  const [confirmpassword, setconfirmpassword] = useState("");
+  const [displayname, setdisplayname] = useState("");
+  const [showConfirm, setShowconfirm] = useState(false);
   const handleOnClose = () => setShowconfirm(false);
 
   const fetchData = () => {
@@ -27,7 +25,7 @@ const User = () => {
     })
       .then((response) => {
         setuser(response.data);
-        setdisplayname(response.data.displayname)
+        setdisplayname(response.data.displayname);
       })
       .catch((err) => {
         console.log(err);
@@ -52,7 +50,7 @@ const User = () => {
           Username
           <input
             className={`shadow appearance-none border rounded-lg w-72 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  ${
-               spaceCheck ?"":"" //"border-2  border-red-500" : ""
+              spaceCheck ? "" : ""
             }`}
             id="username"
             type="text"
@@ -98,8 +96,7 @@ const User = () => {
             id="password"
             type="password"
             placeholder="new password"
-            onChange={e=>setpassword((x)=>e.target.value)}
-            
+            onChange={(e) => setpassword((x) => e.target.value)}
           />
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 pt-5"
@@ -111,35 +108,34 @@ const User = () => {
             id="password"
             type="password"
             placeholder="confirm password"
-            onChange={e=>setconfirmpassword((x)=>e.target.value)}
+            onChange={(e) => setconfirmpassword((x) => e.target.value)}
           />
         </div>
         <div className="pt-10">
-          <button className="font-bold rounded-lg bg-orange-600 text-[20px] text-white px-5 py-2  hover:bg-orange-700 duration-500 text-center "
-           onClick={()=>{
-            if(password==confirmpassword)
-              return setShowconfirm(true)
-            else
-            Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'Something went wrong!',
-
-            })
-        
-           }}
-           >
+          <button
+            className="font-bold rounded-lg bg-orange-600 text-[20px] text-white px-5 py-2  hover:bg-orange-700 duration-500 text-center "
+            onClick={() => {
+              if (password == confirmpassword) return setShowconfirm(true);
+              else
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "Something went wrong!",
+                });
+            }}
+          >
             Save
           </button>
         </div>
       </div>
       <div>
-        <Password 
-         password={password==""?user.password:password}
-         userpassword={user.password}
-         displayname={displayname}
-         onClose={handleOnClose}
-         visible={showConfirm}/> 
+        <Password
+          password={password == "" ? user.password : password}
+          userpassword={user.password}
+          displayname={displayname}
+          onClose={handleOnClose}
+          visible={showConfirm}
+        />
       </div>
     </div>
   );

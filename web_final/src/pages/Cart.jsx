@@ -1,9 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
 import { HiTrash } from "react-icons/hi";
 import Checkout from "../components/Checkout";
-import Post_card from "../components/Post_card";
 
 function Cart(props) {
   document.title = "Cart";
@@ -90,42 +89,37 @@ function Cart(props) {
   console.log(cart);
   return (
     <div className="w-screen  bg-base min-h-screen bg-repeat-y bg-cover pb-20 font-prom ">
-
-    {cart.length >=1 ?(
-       <div className=" pt-20 pb-10 flex justify-center text-center font-prom">
-       <div className=" bg-orange-600 text-white text-2xl  w-52 p-2 rounded-xl">Cart</div>
-     </div> ):(""
-    )}
+      {cart.length >= 1 ? (
+        <div className=" pt-20 pb-10 flex justify-center text-center font-prom">
+          <div className=" bg-orange-600 text-white text-2xl  w-52 p-2 rounded-xl">
+            Cart
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
       {cart.length == 0 ? (
         <div className="flex flex-col justify-center items-center h-screen">
-          <div className="text-gray-700 text-5xl pt-4">
-          No products yet. 
-
-          </div>
+          <div className="text-gray-700 text-5xl pt-4">No products yet.</div>
           <div className=" text-gray-500 text-3xl pt-4 pb-4">
-
-          Please order now.
+            Please order now.
           </div>
           <a href="/restaurant">
-
-        <button className="py-2 px-5 bg-orange-600 shadow-xl border-2 border-amber-200 hover:bg-amber-200 hover:text-orange-600  focus:ring-orange-600 focus:ring-offset-amber-200  text-amber-100  transition ease-in duration-200 text-center text-base font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full ">
-          Order now
-        </button>
+            <button className="py-2 px-5 bg-orange-600 shadow-xl border-2 border-amber-200 hover:bg-amber-200 hover:text-orange-600  focus:ring-orange-600 focus:ring-offset-amber-200  text-amber-100  transition ease-in duration-200 text-center text-base font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full ">
+              Order now
+            </button>
           </a>
-
         </div>
       ) : (
         ""
       )}
 
-      
       <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 px-[50px] lg:px-36">
         {restslsit.map((rest, index) => {
           const data = cart.filter(
             (x) => x.menu.restaurants.restId == rest.restId
           );
-          //console.log(rest.restId+' * '+cart[0].menu.restaurants.restId);
-          //console.log(data)
+
           let total = 0;
           for (let index = 0; index < data.length; index++) {
             total += data[index].price;
@@ -145,7 +139,7 @@ function Cart(props) {
                         const temp = data.filter(
                           (x) => x.menu.menuId == index.menuId
                         );
-                        //console.log(temp);
+
                         let count = 0;
                         for (let index = 0; index < temp.length; index++) {
                           count += temp[index].countFood;
@@ -193,7 +187,9 @@ function Cart(props) {
       <div className="flex justify-center pt-16 bottom-2">
         <button
           type="button"
-          className={` z-90 py-2 px-5 bg-orange-600 shadow-xl border-2 border-amber-200 hover:bg-amber-200 hover:text-orange-600  focus:ring-orange-600 focus:ring-offset-amber-200  text-amber-100  transition ease-in duration-200 text-center text-base font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ${cart.length == 0?" invisible":" visible"}`}
+          className={` z-90 py-2 px-5 bg-orange-600 shadow-xl border-2 border-amber-200 hover:bg-amber-200 hover:text-orange-600  focus:ring-orange-600 focus:ring-offset-amber-200  text-amber-100  transition ease-in duration-200 text-center text-base font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ${
+            cart.length == 0 ? " invisible" : " visible"
+          }`}
           onClick={() => setShowCheck(true)}
         >
           <div className="text-sm md:text-xl">Check Out</div>
