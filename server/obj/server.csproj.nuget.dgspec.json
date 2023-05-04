@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\2D-2\\Web_app\\web_project\\server\\server.csproj": {}
+    "D:\\web_potato\\web_potato\\server\\server.csproj": {}
   },
   "projects": {
-    "D:\\2D-2\\Web_app\\web_project\\server\\server.csproj": {
+    "D:\\web_potato\\web_potato\\server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2D-2\\Web_app\\web_project\\server\\server.csproj",
+        "projectUniqueName": "D:\\web_potato\\web_potato\\server\\server.csproj",
         "projectName": "server",
-        "projectPath": "D:\\2D-2\\Web_app\\web_project\\server\\server.csproj",
+        "projectPath": "D:\\web_potato\\web_potato\\server\\server.csproj",
         "packagesPath": "C:\\Users\\Windows 10\\.nuget\\packages\\",
-        "outputPath": "D:\\2D-2\\Web_app\\web_project\\server\\obj\\",
+        "outputPath": "D:\\web_potato\\web_potato\\server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config",

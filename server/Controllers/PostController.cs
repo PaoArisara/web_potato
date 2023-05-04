@@ -121,7 +121,7 @@ public class PostController: ControllerBase
             var post = this._dbContext.Posts.Include(x=>x.User).Include(x=>x.Restaurants).ToList();
             foreach (var item in post)
             {
-                if( item.User==user&&item.Status=="use")
+                if( item.User==user)
                     postAll.Add(item); 
             }
             return Ok(postAll);

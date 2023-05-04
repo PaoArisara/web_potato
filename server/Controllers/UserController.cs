@@ -54,7 +54,8 @@ public class UserController : ControllerBase
     public IActionResult Signup(AddUser signup)
     {
         var item = this._dbContext.Users.FirstOrDefault(o => o.Username == signup.username);
-        if (item == null)
+        var email = this._dbContext.Users.FirstOrDefault(o => o.Email == signup.email);
+        if (item == null || email == null)
         {
             var obj = new User();
             obj.Username = signup.username;
@@ -67,6 +68,30 @@ public class UserController : ControllerBase
 //555
         }
         return Ok("no found token");
+    }
+    [HttpPost("Edit")]
+    public IActionResult Edit(edit e)
+    {
+        var httpRequest = _httpContextAccessor.HttpContext.Request;
+        var authorizationHeader = httpRequest.Headers["Authorization"].ToString();
+        
+        if (!string.IsNullOrEmpty(authorizationHeader) && authorizationHeader.StartsWith("Bearer "))
+        {
+            var tokenString = authorizationHeader.Substring("Bearer ".Length).Trim();
+            var handler = new JwtSecurityTokenHandler();
+            var token = handler.ReadJwtToken(tokenString);
+            // Access the claims in the token
+            var username = token.Payload["unique_name"];
+        
+            var user = this._dbContext.Users.FirstOrDefault(o => o.Username == username);
+            user.Password = e.password;
+            user.Displayname = e.displayname;
+            this._dbContext.Update(user);
+            this._dbContext.SaveChanges();
+            return Ok("success");
+        }
+        return Ok("no found token");
+        
     }
 }
 

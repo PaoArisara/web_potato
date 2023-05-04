@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EtszZU8z3IyYfGUo4+B6kmFsIcmKutF1NMNYFVfjPXpzcR4QSWLn7xG6gd3EgELxKxxYz4YRxdnORscVYxnJBA==",
+  "dgSpecHash": "ktt34/5R/xbWZzBrYqE4icwFZ1mogh70gXEvaYL1inhu/uBf0t5JR36BMP9dCJ6v5qlYuS4/flls0NLsOjkrQQ==",
   "success": true,
-  "projectFilePath": "D:\\2D-2\\Web_app\\web_project\\server\\server.csproj",
+  "projectFilePath": "D:\\web_potato\\web_potato\\server\\server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Windows 10\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\Windows 10\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

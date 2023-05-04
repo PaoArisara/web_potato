@@ -17,7 +17,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy  =>
         {
-            policy.WithOrigins("http://localhost:5173","http://localhost").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+            policy.WithOrigins("http://localhost:5173","http://localhost","*").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
         });
 });
 
@@ -53,6 +53,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
+app.Urls.Add("http://172.20.10.4:5174");//192.168.43.236:5174
+// app.Urls.Add("http://localhost:5173");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
