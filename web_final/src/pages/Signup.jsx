@@ -82,7 +82,7 @@ const Signup = () => {
   };
 
   return (
-    <div className=" pb-10 w-screen h-screen bg-amber-100 bg-cover flex justify-center items-center font-prom">
+    <div className="w-screen h-screen bg-amber-100 bg-cover flex justify-center items-center font-prom">
       <div className="bg-amber-300  bg-opacity-60 w-[30rem] p-6 sm:p-16  rounded-2xl z-10">
         <div className=" flex justify-between pb-7">
           <div>

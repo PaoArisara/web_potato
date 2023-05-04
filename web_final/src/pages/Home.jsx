@@ -126,22 +126,22 @@ function Home() {
             <footer class="bg-amber-200 text-center text-white ">
               <div class="container pt-4">
                 <div class="mb-4 flex justify-center ">
-                  <a href="#!" class="mr-9  text-black font-bold">
+                  <a href="https://web.facebook.com/eark.siraphops" class="mr-9  text-black font-bold">
                     <p>64010893</p>
                   </a>
-                  <a href="#!" class="mr-9  text-black font-bold">
+                  <a href="https://web.facebook.com/giftzy.achasewin" class="mr-9  text-black font-bold">
                     <p>64010902</p>
                   </a>
-                  <a href="#!" class="mr-9  text-black font-bold">
+                  <a href="https://web.facebook.com/popo.oay" class="mr-9  text-black font-bold">
                     <p>64010986</p>
                   </a>
-                  <a href="#!" class="mr-9  text-black font-bold">
+                  <a href="https://web.facebook.com/coophom.linpaion" class="mr-9  text-black font-bold">
                     <p>64010987</p>
                   </a>
-                  <a href="#!" class="mr-9  text-black font-bold">
+                  <a href="https://web.facebook.com/profile.php?id=100070754763779" class="mr-9  text-black font-bold">
                     <p>64010997</p>
                   </a>
-                  <a href="#!" class="mr-9  text-black font-bold">
+                  <a href="https://web.facebook.com/pattanapon.chaiwongsa.3" class="mr-9  text-black font-bold">
                     <p>64011204</p>
                   </a>
                 </div>
