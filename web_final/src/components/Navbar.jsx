@@ -97,15 +97,15 @@ const Navbar = (props) => {
 
   return (
     <nav
-      className={`w-full fixed left-0 z-40 shadow-xl md:shadow-none  bg-white opacity-100 md:opacity-100 md:bg-transparent  ${
+      className={`w-full fixed left-0 z-40 shadow-xl md:shadow  bg-white ${
         open
           ? " transition duration-1000 ease-in-out  pb-72"
           : " transition bg-light duration-1000 pb-0"
       }${drop ? "pb-[104px] bg-white" : null}`}
     >
       <div
-        className={` md:flex mt-2 pb-2 md:pb-10  items-center justify-between md:px-[6rem] px-[3rem] relative  md:-top-12  transition duration-1000 md:hover:translate-y-12 ${
-          onTop ? "md:translate-y-12" : ""
+        className={` md:flex mt-1 md:top-2 pb-5   items-center justify-between md:px-[6rem] px-[3rem] relative   transition duration-1000 ${
+          onTop ? "" : ""
         } `}
       >
         <a href="/">
