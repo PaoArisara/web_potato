@@ -40,7 +40,7 @@ const Navbar = (props) => {
   const getData = () => {
     axios({
       method: "get",
-      url: "http://172.20.10.4:5174/api/Cart",
+      url: "http://127.0.0.1:5174/api/Cart",
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -55,7 +55,7 @@ const Navbar = (props) => {
 
     axios({
       method: "get",
-      url: "http://172.20.10.4:5174/api/restaurants",
+      url: "http://127.0.0.1:5174/api/restaurants",
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),

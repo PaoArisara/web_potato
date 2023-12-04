@@ -12,7 +12,7 @@ function Restaurant() {
     document.title = "Restaurant";
     axios({
       method: "get",
-      url: "http://172.20.10.4:5174/api/restaurants",
+      url: "http://127.0.0.1:5174/api/restaurants",
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
@@ -31,14 +31,17 @@ function Restaurant() {
   return (
     <div class="w-screen  bg-base min-h-screen bg-repeat-y bg-cover pb-20 font-prom">
       <div className=" pt-20  flex justify-center text-center font-prom">
-        <div className=" bg-orange-600 text-white text-2xl w-52 p-2 rounded-xl">Restaurant</div>
+        <div className=" bg-orange-600 text-white text-2xl w-52 p-2 rounded-xl">
+          Restaurant
+        </div>
       </div>
-        <div className="text-center pb-10 text-lg pt-3">กรุณาเลือกร้านอาหารเพื่อทำการฝากซื้อ</div>
+      <div className="text-center pb-10 text-lg pt-3">
+        กรุณาเลือกร้านอาหารเพื่อทำการฝากซื้อ
+      </div>
 
       <div className="flex justify-center">
         <div class="grid justify-center grid-cols-1 gap-20 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 px-10 lg:px-40">
           {rests.map((rest, index) => (
-            
             <div class="overflow-hidden rounded-2xl bg-res pb-2 " key={index}>
               <div class="flex items-center h-72 w-full  overflow-hidden">
                 <img src={rest.restPic} alt={rest.restName} />

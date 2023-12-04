@@ -2,20 +2,18 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BiChevronLeftCircle } from "react-icons/bi";
 
-
 function Menu(props) {
   const [Num, setNum] = useState(0);
   const [Addcardalert, setAddcardalert] = useState(false);
   function AddtoCart() {
-    if(Num==0)
-      return;
+    if (Num == 0) return;
     props.setM(props.menu.menuFood);
-    props.setText("Add")
+    props.setText("Add");
     props.setPush(true);
 
     axios({
       method: "post",
-      url: "http://172.20.10.4:5174/api/Cart",
+      url: "http://127.0.0.1:5174/api/Cart",
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),

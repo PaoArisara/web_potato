@@ -13,7 +13,7 @@ function Allorder_card({ item, menu, setreload, setR, setPush, setText }) {
     setText("Accept");
     axios({
       method: "post",
-      url: "http://172.20.10.4:5174/api/Accept",
+      url: "http://127.0.0.1:5174/api/Accept",
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),

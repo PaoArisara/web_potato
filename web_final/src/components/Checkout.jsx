@@ -15,7 +15,7 @@ function Checkout({ visible, onClose, cart, restslsit, menulsit, reload }) {
   function remove(id) {
     axios({
       method: "delete",
-      url: "http://172.20.10.4:5174/api/Cart/" + String(id),
+      url: "http://127.0.0.1:5174/api/Cart/" + String(id),
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -67,7 +67,7 @@ function Checkout({ visible, onClose, cart, restslsit, menulsit, reload }) {
 
             axios({
               method: "post",
-              url: "http://172.20.10.4:5174/api/Post",
+              url: "http://127.0.0.1:5174/api/Post",
               headers: {
                 "Content-Type": "application/json",
                 Authorization: "Bearer " + localStorage.getItem("token"),
@@ -106,8 +106,8 @@ function Checkout({ visible, onClose, cart, restslsit, menulsit, reload }) {
                 setAddress((y) => x.target.value);
                 if (x.target.value != "") {
                   setAddnone(true);
-                }else{
-                  setAddnone(false)
+                } else {
+                  setAddnone(false);
                 }
               }}
               placeholder="Enter Address"
@@ -123,11 +123,10 @@ function Checkout({ visible, onClose, cart, restslsit, menulsit, reload }) {
                 console.log(x.target.value.length);
                 if (x.target.value == "" || x.target.value.length < 10) {
                   setPhonenone(false);
-                }else{
-                    setPhonenone(true)
-                  }
+                } else {
+                  setPhonenone(true);
                 }
-              }
+              }}
               placeholder="Enter Telephone"
             />
           </div>

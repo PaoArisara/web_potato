@@ -5,7 +5,7 @@ function Receive_card({ menu, accept, setreload }) {
   function Cancel() {
     axios({
       method: "delete",
-      url: "http://172.20.10.4:5174/api/Cancel/" + accept.acceptId,
+      url: "http://127.0.0.1:5174/api/Cancel/" + accept.acceptId,
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -17,7 +17,7 @@ function Receive_card({ menu, accept, setreload }) {
   function Complete() {
     axios({
       method: "delete",
-      url: "http://172.20.10.4:5174/api/Complete/" + accept.acceptId,
+      url: "http://127.0.0.1:5174/api/Complete/" + accept.acceptId,
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),

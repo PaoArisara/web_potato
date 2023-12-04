@@ -53,8 +53,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-app.Urls.Add("http://172.20.10.4:5174");//192.168.43.236:5174
-// app.Urls.Add("http://localhost:5173");
+// app.Urls.Add("http://192.168.43.236:5174");//
+app.Urls.Add("http://localhost:5174");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

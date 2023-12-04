@@ -15,7 +15,7 @@ function Cart(props) {
   const fetchData = () => {
     axios({
       method: "get",
-      url: "http://172.20.10.4:5174/api/Cart",
+      url: "http://127.0.0.1:5174/api/Cart",
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -32,7 +32,7 @@ function Cart(props) {
   const fetchData1 = () => {
     axios({
       method: "get",
-      url: "http://172.20.10.4:5174/api/restaurants",
+      url: "http://127.0.0.1:5174/api/restaurants",
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -49,7 +49,7 @@ function Cart(props) {
   const fetchData2 = () => {
     axios({
       method: "get",
-      url: "http://172.20.10.4:5174/api/menus",
+      url: "http://127.0.0.1:5174/api/menus",
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -72,7 +72,7 @@ function Cart(props) {
   function remove(id) {
     axios({
       method: "delete",
-      url: "http://172.20.10.4:5174/api/Cart/" + String(id),
+      url: "http://127.0.0.1:5174/api/Cart/" + String(id),
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
