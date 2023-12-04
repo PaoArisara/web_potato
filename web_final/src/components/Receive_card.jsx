@@ -46,7 +46,7 @@ function Receive_card({ menu, accept, setreload }) {
                   <div>Name :</div>
                 </div>
                 <div className="text-base sm:text-lg">
-                  {accept.post.user.username}
+                  {accept.post.user.displayname}
                 </div>
               </li>
               <li className="flex justify-between items-center gap-x-3">
